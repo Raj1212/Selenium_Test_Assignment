@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 public class CallModule{
 	private static  WebDriver driver;
 	private static Actions act;
-	public static int xoff=850, yoff=120,i=2;
+	public static int xoff=650, yoff=50,i=2;
 
 	static String NodeID="//*[starts-with(@id,'node-')]";
 	static String RecID="//*[starts-with(@id,'rec-')]";
@@ -39,7 +39,7 @@ public class CallModule{
 	{
 		WebElement Start = driver.findElement(By.id("module-1"));
 		WebElement SendSMS=driver.findElement(By.xpath("//li[text()[contains(.,'Send an SMS')]]"));		
-		act.dragAndDropBy(SendSMS, 215,10).build().perform();
+		act.dragAndDropBy(SendSMS, 1000,-125).build().perform();
 		By PN = By.name("phone_constant");
 		Func.Wait2(PN,driver);
 		WebElement SMS = driver.findElement(By.id("module-2"));
@@ -56,7 +56,7 @@ public class CallModule{
 
 	{
 		WebElement SendEmail= driver.findElement(By.xpath("//li[text()[contains(.,'Send an Email')]]"));
-		act.dragAndDropBy(SendEmail, 600,30).build().perform();
+		act.dragAndDropBy(SendEmail, 300,40).build().perform();
 		By SMTP = By.name("smtp_url");
 		Func.Wait2(SMTP,driver);
 		WebElement MAIL = driver.findElement(By.id("module-3"));
@@ -89,7 +89,7 @@ public class CallModule{
 
 		act.dragAndDrop(node,ExitRec.get(i)).build().perform();
 		xoff+=100;
-		yoff+=130;
+		yoff+=100;
 		i++;
 
 	}
