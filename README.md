@@ -14,4 +14,4 @@ Requirements
 To use this project the following requirements have to be met:
 Java8+
 
-Things to improve:- Drag and Drop using x-y offset could be improved further.
+Things to improve:- Drag and Drop using x-y offset could be improved further to make UI look better. Need to defined a separate class/object_repository for all constants.
