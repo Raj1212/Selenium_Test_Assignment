@@ -12,7 +12,7 @@ public class Selenium_Assignment {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://quickfuseapps.com/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
+		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS) ;
 		CallModule CM= new CallModule(driver);
 		CM.NewPage();
 	//	driver.quit();
